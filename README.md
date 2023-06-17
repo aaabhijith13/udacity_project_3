@@ -30,7 +30,7 @@ The hyperparameter's I tuned are Learning rate and Batch size. Choosing an appro
 
 ### Results
 In the Jupiter notebook multiple rules for debugger and profiller were created. An ml.m5.large instance was used which didnt support GPU usage but if GPU usauge was utilized the process could have ended much faster. 
-[This is the final test image that was used](test_image.jpg) Test Image
+![This is the final test image that was used](test_image.jpg) Test Image
 
 
 ## Model Deployment
