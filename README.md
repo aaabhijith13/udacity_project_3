@@ -14,7 +14,7 @@ The project is designed to be dataset independent so if there is a dataset that 
 ### Access
 Upload the data to an S3 bucket through the AWS Gateway so that SageMaker has access to the data. 
 This is a sample of the data set that was used. 
-![DataSet Sample](sample_images.png)
+![DataSet Sample](sample_images.png) DataSet Sample
 
 ## Hyperparameter Tuning
 The model I used for this project was ResNet50 as it  has demonstrated excellent performance on various computer vision tasks, such as image classification and object detection. Its deep architecture, with 50 layers, enables it to learn complex representations and capture intricate patterns in the data, leading to accurate and reliable predictions.
@@ -22,11 +22,11 @@ The hyperparameter's I tuned are Learning rate and Batch size. Choosing an appro
 "lr": ContinuousParameter(0.001, 0.1),
 "batch-size": CategoricalParameter([20, 34, 40, 60, 75]).
 
-![Hyperparameter Tuning Jobs Completed](hyp_jobs.png)
+![Hyperparameter Tuning Jobs Completed](hyp_jobs.png) Hyperparameter Tuning Jobs Completed
 
 ## Debugging and Profiling
-![Debugger Job Completed](debugger_profile.png)
-[Here the Profiler report can be found](ProfilerReport)
+![Debugger Job Completed](debugger_profile.png) Debugger Job Completed
+[Here the Profiler report can be found](ProfilerReport) Here the Profiler report can be found
 
 ### Results
 In the Jupiter notebook multiple rules for debugger and profiller were created. An ml.m5.large instance was used which didnt support GPU usage but if GPU usauge was utilized the process could have ended much faster. 
