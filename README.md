@@ -13,33 +13,28 @@ The project is designed to be dataset independent so if there is a dataset that 
 
 ### Access
 Upload the data to an S3 bucket through the AWS Gateway so that SageMaker has access to the data. 
+This is a sample of the data set that was used. 
+![DataSet Sample](sample_images.png)
 
 ## Hyperparameter Tuning
 The model I used for this project was ResNet50 as it  has demonstrated excellent performance on various computer vision tasks, such as image classification and object detection. Its deep architecture, with 50 layers, enables it to learn complex representations and capture intricate patterns in the data, leading to accurate and reliable predictions.
 The hyperparameter's I tuned are Learning rate and Batch size. Choosing an appropriate learning rate is crucial for successful model convergence. If the learning rate is too high, the model may fail to converge, leading to unstable or poor performance. The choice of batch size can impact both the computational efficiency and the quality of the learned model. The ranges I provided and used are as follows: 
 "lr": ContinuousParameter(0.001, 0.1),
 "batch-size": CategoricalParameter([20, 34, 40, 60, 75]).
-![](hpy_jobs.png)
 
-Remember that your README should:
-- Include a screenshot of completed training jobs
-- Logs metrics during the training process
-- Tune at least two hyperparameters
-- Retrieve the best best hyperparameters from all your training jobs
+![Hyperparameter Tuning Jobs Completed](hyp_jobs.png)
 
 ## Debugging and Profiling
-**TODO**: Give an overview of how you performed model debugging and profiling in Sagemaker
+[Here the Profiler report can be found](ProfilerReport)
 
 ### Results
-**TODO**: What are the results/insights did you get by profiling/debugging your model?
+In the Jupiter notebook multiple rules for debugger and profiller were created. An ml.m5.large instance was used which didnt support GPU usage but if GPU usauge was utilized the process could have ended much faster. 
 
-**TODO** Remember to provide the profiler html/pdf file in your submission.
 
 
 ## Model Deployment
-**TODO**: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
+For Model Deployment an ml.m5.large instance of 1 was used. The infernce.py was used for Refernece for Modal Deployment, but a pytorch model was used. The End point was deployed and the following was used as a test image. 
 
-**TODO** Remember to provide a screenshot of the deployed active endpoint in Sagemaker.
+![Screenshot of the deployed active endpoint in Sagemaker.](endpoint.png)
+![Endpoint in Sagemaker.](endpoint_working.png)
 
-## Standout Suggestions
-**TODO (Optional):** This is where you can provide information about any standout suggestions that you have attempted.
