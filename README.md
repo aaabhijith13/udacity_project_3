@@ -31,8 +31,6 @@ The hyperparameter's I tuned are Learning rate and Batch size. Choosing an appro
 ### Results
 In the Jupiter notebook multiple rules for debugger and profiller were created. An ml.m5.large instance was used which didnt support GPU usage but if GPU usauge was utilized the process could have ended much faster. 
 
-
-
 ## Model Deployment
 For Model Deployment an ml.m5.large instance of 1 was used. The infernce.py was used for Refernece for Modal Deployment, but a pytorch model was used. The End point was deployed and the following was used as a test image. 
 
