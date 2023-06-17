@@ -25,6 +25,7 @@ The hyperparameter's I tuned are Learning rate and Batch size. Choosing an appro
 ![Hyperparameter Tuning Jobs Completed](hyp_jobs.png)
 
 ## Debugging and Profiling
+![Debugger Job Completed](debugger_profile.png)
 [Here the Profiler report can be found](ProfilerReport)
 
 ### Results
