@@ -19,7 +19,7 @@ The model I used for this project was ResNet50 as it  has demonstrated excellent
 The hyperparameter's I tuned are Learning rate and Batch size. Choosing an appropriate learning rate is crucial for successful model convergence. If the learning rate is too high, the model may fail to converge, leading to unstable or poor performance. The choice of batch size can impact both the computational efficiency and the quality of the learned model. The ranges I provided and used are as follows: 
 "lr": ContinuousParameter(0.001, 0.1),
 "batch-size": CategoricalParameter([20, 34, 40, 60, 75]).
-
+![Completed Hyperparameter Tuning Jobs](hpo_jobs.png)
 
 Remember that your README should:
 - Include a screenshot of completed training jobs
